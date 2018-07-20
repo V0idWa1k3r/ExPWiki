@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Combat</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Combat System</h1>
+		</div>
+		ExPetrum introduces a custom combat system into the game. Different key combinations with various items may produce special attacks.
+		<br>
+		<h2>Weights and Weapons</h2>
+		ExPetrum introduces a weapon weight system. Each weapon has an associated weight and a weapon type:
+		<br>
+		Weapon weights:
+		<ul>
+			<li>Light</li>
+			<li>Normal</li>
+			<li>Heavy</li>
+		</ul>
+		Weapon types:
+		<ul>
+			<li>Sword</li>
+			<li>Dagger</li>
+			<li>Spear</li>
+			<li>Axe</li>
+			<li>Hammer</li>
+			<li>Battleaxe(Axe + Sword)</li>
+			<li>Halberd(Battleaxe + Spear)</li>
+			<li>Battlehammer(Hammer)</li>
+			<li>Scythe(Sword)</li>
+			<li>None</li>
+		</ul>
+		Weapon stats:
+		<ul>
+			<li>Battleaxe: Heavy, Battleaxe</li>
+			<li>Chisel: Light, None</li>
+			<li>Gardening Tool: Light, None</li>
+			<li>Hammer: Heavy, Hammer</li>
+			<li>Hoe: Heavy, None</li>
+			<li>Knift: Light, Dagger</li>
+			<li>Pickaxe: Heavy, None</li>
+			<li>Saw: Normal, None</li>
+			<li>Scythe: Heavy, Scythe</li>
+			<li>Shovel: Heavy, None</li>
+			<li>Spear: Normal, Spear</li>
+			<li>Sword: Normal, Sword</li>
+		</ul>
+		<h2>Special Attacks</h2>
+		The following special attacks exist:
+		<ul>
+			<li>
+				Behead:
+				<ul>
+					<li>Triggered by: Pressing D(right) and Left Mouse Button(attack)</li>
+					<li>Executed by: Normal or Heavy Axes</li>
+					<li>Effect: 100% attack damage, 1 - targetHealth / targetMaxHealth * 10% chance of instakill.</li>
+				</ul>
+			</li>
+			<li>
+				Down Strike:
+				<ul>
+					<li>Triggered by: Pressing S(back), W(forward) and Left Mouse Button(attack)</li>
+					<li>Executed by: Normal or Heavy Hammers, Axes or Swords</li>
+					<li>Effect: Strong knockback, stuns the target for a second(30 ticks with a heacy weapon) </li>
+				</ul>
+			</li>
+			<li>
+				Throw:
+				<ul>
+					<li>Triggered by: Pressing S(back), W(forward) and Left Mouse Button(attack)</li>
+					<li>Executed by: Light Daggers</li>
+					<li>Effect: Throws the currently equipped weapon in the direction of the attack. Thrown weapon deals 100% damage and passes through targets.</li>
+				</ul>
+			</li>
+			<li>
+				Piercing Dash:
+				<ul>
+					<li>Triggered by: Sprinting and Pressing Left Mouse Button(attack)</li>
+					<li>Executed by: Any Swords, Spears and Daggers</li>
+					<li>Effect: Lunges the player forward dealing (1 - distance / 6) * 100% damage to all enemies in a line in front of the player. Also applies strong knockback to all targets.</li>
+				</ul>
+			</li>
+			<li>
+				Shield Slam:
+				<ul>
+					<li>Triggered by: Pressing W(forward), blocking(right mouse button) and Left Mouse Button(attack)</li>
+					<li>Executed by: Shields</li>
+					<li>Effect: Strong knockback to the target.</li>
+				</ul>
+			</li>
+			<li>
+				Slash:
+				<ul>
+					<li>Triggered by: Pressing S(back) and Left Mouse Button(attack)</li>
+					<li>Executed by: Any <strong>not</strong> Daggers or Spears</li>
+					<li>Effect: 85% attack damage to every enemy in front of the player.</li>
+				</ul>
+			</li>
+			<li>
+				Spin:
+				<ul>
+					<li>Triggered by: Pressing D(right), A(left) and Left Mouse Button(attack)</li>
+					<li>Executed by: Normal or Heavy Swords, Hammers and Axes</li>
+					<li>Effect: 75% attack damage to all enemies around the player. Physically spins the player.</li>
+				</ul>
+			</li>
+			<li>
+				Stab:
+				<ul>
+					<li>Triggered by: Pressing S(back) and Left Mouse Button(attack)</li>
+					<li>Executed by: Light Daggers</li>
+					<li>Effect: A flurry of 10 stabs to the target in front of the player ignoring invincibility frames each stab dealing 10% damage</li>
+				</ul>
+			</li>
+		</ul>
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

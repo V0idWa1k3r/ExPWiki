@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>World Temperature</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>World Temperature System</h1>
+		</div>
+		<div class="framed" style="position:absolute;width:132;height:173;right:0px">
+			 <img src="https://docs.google.com/uc?id=155Xnr5pm5Tcb-P-UVlqxI7Vigt6SyyX2">
+		</div>
+		<h2>World Temperature</h2>
+		In ExPetrum the temperature of the world changes over time unlike in vanilla where the temperature is based on the biome only.
+		<br>
+		Similar to vanilla each biome also has it's temperature value. The final temperature is calculated as:
+		<br>
+		biomeTemperature + worldTemperature
+		<br>
+		The temperature is displayed in the bottom-right corner of the screen.
+		<br>
+		The text corresponds to the current temperature in celcius:
+		<ul>
+			<li>Freezing Cold: Less than -30 degrees</li>
+			<li>Very Cold: -30 to -20</li>
+			<li>Cold: -20 to -12</li>
+			<li>Slightly Cold: -12 to -2</li>
+			<li>Water Freezing: -2 to +2</li>
+			<li>Warm: +2 to +12</li>
+			<li>Very Warm: +12 to +20</li>
+			<li>Hot: +20 to +30</li>
+			<li>Insanely Hot: More than +30 degrees</li>
+		</ul>
+		The temperature display takes the temperature of the biome you are currently in into consideration.
+		<h2>Temperature Effects</h2>
+		The temperature of the world has the following effects:
+		<ul>
+			<li>If the temperature is below 0 the water will start freezing and instead of rain snow will fall and accumulate.</li>
+			<li>If the temperature is below 0 the snow will create snow layers in the world</li>
+			<li>If the temperature is above 0 the rain will create water puddles</li>
+			<li>If the temperature is above 0 snow layers and water puddles will slowly dissapate</li>
+			<li>Crop health and growth rate is affected by temperature</li>
+		</ul>
+		<h2>Temperature Settings</h2>
+		Temperature is randomly generated at the beginning of each day. 
+		<br>The initial values for temperature are obtained from <a href="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/data/seasonsTemperatureRanges.json">ExPetrum.jar/assets/exp/data/seasonsTemperatureRanges.json</a>
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

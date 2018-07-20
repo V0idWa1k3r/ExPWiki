@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Humidity</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Humidity System</h1>
+		</div>
+		<div class="framed" style="position:absolute;width:132;height:173;right:0px">
+			 <img src="https://docs.google.com/uc?id=1KMtIaKCbV2W0U6jZKz0ms6COn7yEujrO">
+		</div>
+		ExPetrum introduces a system that gives the player an idea of how soon is it going to rain.
+		<br>
+		Humidity is displayed in the bottom-right corner of the screen with the text representing the percentage of humidity:
+		<ul>
+			<li>Very Dry: 0% - 14%</li>
+			<li>Dry: 14% - 28%</li>
+			<li>Normal: 28% - 42%</li>
+			<li>Slightly Wet: 42% - 57%</li>
+			<li>Wet: 57% - 71%</li>
+			<li>Very Wet: 71% - 85%</li>
+			<li>It Will Rain Any Minute: 85% - 100%</li>
+			<li>It's Raining: 100%</li>
+		</ul>
+		Humidity is increased by [0~0.00002] each tick.
+		<br>
+		Each tick there is a humidity / 10000 chance(0.2% chance each second at 100% humidity) for the rain to start. Thereby it doesn't start raining when humidity reaches 100% but the humidity gets set to 100% when it starts raining.
+		<br>
+		When the rain starts it will go on for 1000 + [0~20000] ticks.
+		<br>
+		When the rain stops the humidity is reset to [0~0.33]
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

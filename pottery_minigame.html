@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Pottery Minigame</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Pottery Minigame System</h1>
+		</div>
+		<img src="https://docs.google.com/uc?id=1D3vos2tpmHpkDFdmGuo9nPHR2SsJ9mYT">
+		<br>
+		ExPetrum introduces a minigame to the <a href="/ps_manual.html">Pottery Station</a> to create clay pottery.
+		<br>
+		First the player must place 8 clay into the pottery slot. Then they are able to select the type of pottery they want to create by clicking the button. Lastly they must complete the puzzle in order to gain the pottery in question.
+		<br>
+		The puzzle is rather simple - the player must move pieces around until the picture on the right matches the picture on the button. The piece is selected by left-clicking it. If a piece is seleced left-clicking any piece will swap the positions of the two pieces.
+		<br>
+		When a puzzle is completed a sound plays and the clay is replaced with the item in question.
+		<br>
+		The puzzle might be reset by re-opening the GUI of the pottery station.
+		<div w3-include-html="/templates/warning_bug.html"></div>
+		Sometimes two identically looking pieces might get swapped. Unfortunately there isn't a non-expensive way of detecting whether two pieces of the puzzle are identical or not. If the player has completed the puzzle yet no sound plays and the item is not given this bug might be present. Swapping identically looking pieces places solves the issue.
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

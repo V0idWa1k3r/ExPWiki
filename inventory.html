@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Inventory</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Inventory System</h1>
+		</div>
+		<img src="https://docs.google.com/uc?id=1k-rUA7BGTfuMtfACHNGl5kYBTnsqdHWJ">
+		<br>
+		ExPetrum changes the way player inventory works by introducing weights and volumes for items.
+		<br>
+		<img src="https://docs.google.com/uc?id=1Z4j_dW7EzUuULpGM8GIJ9C6vAQHgyvTH">
+		<br>
+		The first entry in item's description prefixed with the scales is the weight of the item in grams. The second entry prefixed by a box is the volume of the item. Weight is displayed for the whole stack(individualWeight * stackSize).
+		<br>
+		<h2>Weight</h2>
+		<div w3-include-html="/templates/temp.html"></div>
+		Currently weight doesn't affect anything.
+		<br>
+		<h2>Volume</h2>
+		The volume determines the amount of slots the item physically occupies. The items can occupy any number of slots although in vanilla ExPetrum the volumes range from 1x1 to 4x3. Another item can't be put in a slot that is already occupied by another item. Any item always takes exactly 1 slot of space if held inside of a hotbar or any storage. That makes even bad storage containers like pots pretty useful for storing large items.
+		<br>
+		<h2>Settings</h2>
+		The weight and volume of items can be configured. Go to config/ExPetrum/CustomItemData. Any json file in there not named example.json will be parsed upon game startup and weights/volumes of items will be adjusted/set accordingly. Refer to example.json or vanilla.json for examples. 
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

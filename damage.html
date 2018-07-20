@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Damage</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Damage and Armor Systems</h1>
+		</div>
+		<h2>Body Parts</h2>
+		In ExPetrum the player's body is divided into the following body parts:
+		<ul>
+			<li>Head: Protected by: Helmet</li>
+			<li>Body: Protected by: Chestplate</li>
+			<li>Left Arm: Protected by: Chestplate</li>
+			<li>Right Arm: Protected by: Chestplate</li>
+			<li>Left Leg: Protected by: Leggings, Boots</li>
+			<li>Right Leg: Protected by: Leggings, Boots</li>
+		</ul>
+		<h2>Damage</h2>
+		The damage calculation steps for the player are as following:
+		<ol>
+			<li>At first a body part to damage is determined based on the source:
+				   <ul>
+				   	   <li>Anvil damage has a 92% chance of damaging the head and 8% chance of damaging the body.</li>
+					   <li>Falling damage has a 95% chance of damaging either of the legs and a 5% chance of damaging the body</li>
+					   <li>Crushing(falling block) damage has a 37% chance of damaging the head, 55% chance of damaging ether the body, the left arm or the right arm and a 8% chance of damaging either leg.</li>
+					   <li>Hot floor(magma blocks) damage can damage either of the legs</li>
+					   <li>Any other damage source will randomly select a body part to damage</li>
+				  </ul>
+			</li>
+			<li>Based on the body part selected an armor damage reduction is applied.</li>
+			<li>The damage to the body part is then applied. It is a random value [0-1] not based on the actual damage received. If no armor protection was applied that value is multiplied by 10.</li>
+			<li>The actual damage is calculated by the following formula: <strong>amount * (200 +/-[0~50])</strong></li>
+			<li>The health of the player is modified as currentHealth - damage</li>
+			<li>If the health of the player is less than or equal to 0 then the player is killed</li>
+		</ol>
+		<h2>Armor Protection</h2>
+		<div w3-include-html="/templates/temp.html"></div>
+		Currently the armor protection for non-special mod armor only takes armor toughness attribute into account when calculation the amount of damage reduced.
+		<br>
+		Armor is damaged for half the damage received.
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

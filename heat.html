@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Item Heat</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Item Heat System</h1>
+		</div>
+		<img src="https://docs.google.com/uc?id=1sd8kTIfpRZZ9v_plpYQXoN1q1dIq2GLk">
+		<br>
+		ExPetrum allows the player to heat items up in various heat-containing blocks. Any item can be heated up with some of them having specific heating recipes.
+		<br>
+		The entire stack is heated up at the same time regardless of the amount of items in that stack. All recipes also take advantage of that - the player can perform a recipe over a stack of 64 items and get 64 results.
+  		<br>
+		The temperature is displayed not only in the tooltip but also as a colored square in the top-left corner of the item icon.
+		<br>
+		The temperature text converts to degrees celcius as following:
+		<ul>
+			<li>Cold: Below or equals to 0 degrees</li>
+			<li>Warm: 0 ~ 50 degrees</li>
+			<li>Hot: 50 ~ 100 degrees</li>
+			<li>Very Hot: 100 ~ 200 degrees</li>
+			<li>Brown: 200 ~ 600 degrees</li>
+			<li>Red: 600 ~ 800 degrees</li>
+			<li>Orange: 800 ~ 1000 degrees</li>
+			<li>Yellow: 1000 ~ 1200 degrees</li>
+			<li>White: 1200 ~ 1400 degrees</li>
+			<li>Brilliant White: 1400 ~ Infinity degrees</li>
+		</ul>
+		The items will slowly(10 degrees per second) heat up in heat containing blocks if the current temperature of the item is lower than the temperature of the container with some exceptions:
+		<ul>
+			<li>The <a href="/crucible.html">crucible</a> will heat up items at a rate of 40 degrees per second if there is molten metal in the crucible</li>
+			<li>The <a href="/oven.html">oven</a> will heat up any food at a rate of 20 degrees per second</li>
+		</ul>
+		Any item will slowly(10 degrees per second) cool down in a container provided that the temperature of that container is lower than that of the item with the only exception being the <a href="/anvil.html">anvil</a> where the cooling rate is 2.5 degrees per second.
+		<br>
+		Additionally any item can be instantly cooled down to 0 by right-clicking it on a <a href="/trough.html">trough</a> with water
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Thirst</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Thirst System</h1>
+		</div>
+		<div class="framed" style="position:absolute;width:132;height:173;right:0px">
+			 <img src="https://docs.google.com/uc?id=14xzo76YEcaBe3rBUov3pEghBdXXDfaW_">
+		</div>
+		<h2>Thirst</h2>
+		ExPetrum introduces a new thirst mechanic into the game. The player has 3000 thirst(max and base).
+		<br>The thirst gets rediced by the following formula:
+		<ul>
+			<li>If time was skipped(player slept): skippedTicks * 0.0625</li>
+			<li>Otherwise: 0.125 * <a href="https://minecraft.gamepedia.com/Hunger#Exhaustion_level_increase">exhaustion</a></li>
+		</ul>
+		If the thirst is less than or equal to 0 the player takes 1 point of Starvation damage every 2 seconds.
+		<br>
+		The thirst is displayed in the bottom-left of the screen and the text roughly represents the percentage of thirst the player has left:
+		<ul>
+			<li>Not Thirsty: 100% - 83%</li>
+			<li>Slightly Thirsty: 83% - 66%</li>
+			<li>Thirsty: 66% - 50%</li>
+			<li>Very Thirsty: 50% - 33%</li>
+			<li>Extremely Thirsty: 33% - 16%</li>
+			<li>Dying Of Dehydration: 16% - 0%</li>
+		</ul>
+		Thirst can be replenished by drinking water puddles/blocks(200 thirst per sip), drinking from <a href="/pottery.html">jugs with water</a>(1000 per jug) or by drinking fluid bottles with either juice, milk or water(250 per bottle)
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

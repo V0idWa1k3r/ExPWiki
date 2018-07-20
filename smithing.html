@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Smithing</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Smithing System</h1>
+		</div>
+		<img src="https://docs.google.com/uc?id=1qfSiMrlsslAFiAV7fdr_BHZHqixZrv2x">
+		<br>
+		ExPetrum introduces a card-based minigame as it's smithing mechanics.
+		<br>
+		All minigame data is stored inside the item that is being smithed.
+		<br>
+		As the item is inserted into the anvil and the recipe is selected a random[2~3] amount of cards will be drawn and shown to the player on the screen. The same card can be drawn multiple times. The player must select a card and then a new set of cards is drawn. The goal is to bring the progress value to the maximum while avoiding the integrity value dropping to 0.
+		<h2>Progress</h2>
+		<img src="https://docs.google.com/uc?id=1ISmXBfCO2NSyG4Q4iEaYaY4HgqkCAF6e">
+		<br>
+		The green dot represents the progress value that is displayed as current/max. The goal of the minigame is to bring current to max. Most cards increase progress at the cost of integrity or heat.
+		<h2>Inregrity</h2>
+		<img src="https://docs.google.com/uc?id=1TD25WZe8dO2Q5FsuN2Re4uV-A5mrX-Ch">
+		<br>
+		The blue dot represents the integrity value that is displayed as current/max. If this value drops to 0 the item that is currently being smithed is lost. Most cards will reduce this value although some will give it. If an item is cooled down by right-clicking a trough some[35%~70%] of the lost integrity is restored.
+  		<h2>Heat</h2>
+		<img src="https://docs.google.com/uc?id=1zVquo1rlXaiVObF1XaQQnfpQt-FYvp7L">
+		<br>
+		The red dot represents the heat value of the item. As this value increases the chances to draw Overheat cards also increases linearly. Some cards will increase this value. If an item is cooled down by right-clicking a trough all of the heat is lost(set to 0).
+  		<h2>Cards</h2>
+		The following cards exist:
+		<ul>
+			<li>
+				Bend:
+				<ul>
+					<li>+10 Progress</li>
+					<li>-5 Integrity</li>
+				</ul>
+			</li>
+			<li>
+				Upset:
+				<ul>
+					<li>+5 Progress</li>
+					<li>-5 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Punch:
+				<ul>
+					<li>+5 Progress</li>
+					<li>-15 Integrity</li>
+				</ul>
+			</li>
+			<li>
+				Sharpen:
+				<ul>
+					<li>+5 Progress</li>
+					<li>-10 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Clear:
+				<ul>
+					<li>+5 Integrity</li>
+				</ul>
+			</li>
+			<li>
+				Hit:
+				<ul>
+					<li>+10 Progress</li>
+					<li>-5 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Swag:
+				<ul>
+					<li>+5 Progress</li>
+					<li>+5 Integrity</li>
+				</ul>
+			</li>
+			<li>
+				Swipe:
+				<ul>
+					<li>+20 Progress</li>
+					<li>-20 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Mend:
+				<ul>
+					<li>+10 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Extract:
+				<ul>
+					<li>-10 Integrity</li>
+					<li>-1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Combine:
+				<ul>
+					<li>+20 Progress</li>
+					<li>-10 Integrity</li>
+					<li>+1 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Melt:
+				<ul>
+					<li>+20 Integrity</li>
+					<li>+2 Heat</li>
+				</ul>
+			</li>
+			<li>
+				Overheat:
+				<ul>
+					<li>-10 Integrity</li>
+				</ul>
+			</li>
+			<li>
+				Overheat:
+				<ul>
+					<li>The player takes 2 damage.</li>
+				</ul>
+			</li>
+		</ul>
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

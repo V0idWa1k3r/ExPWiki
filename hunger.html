@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Hunger</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Hunger System</h1>
+		</div>
+		<div class="framed" style="position:absolute;width:132;height:173;right:0px">
+			 <img src="https://docs.google.com/uc?id=1KGeagh9qyjilrJgW1xAsK773ENg4lhnX">
+		</div>
+		<h2>Hunger</h2>
+		In ExPetrum the hunger mechanics are different from vanilla. The player has 2000 calories which slowly go down as time progresses. 
+		<br>The calories value has no maximum and could in theory go above 2000.
+		<br>
+		The calories are removed by the following formula:
+		<ul>
+			<li>The base removal value is 0.05 per tick</li>
+			<li>If the player is sprinting this value is multiplied by 2</li>
+			<li>If time was skipped(for example the player slept) the removed value is calculated as ticksSkipped * value / 2</li>
+			<li>If a player places a block the calories are reduced by 0.1</li>
+			<li>If a player breaks a block the calories are reduced by 1</li>
+		</ul>
+		If the calories are less than or equal to 0 the player takes 1 point of Starvation damage every 2 seconds.
+		<br>
+		The hunger is displayed in the bottom-left of the screen and the text roughly represents the percentage of calories the player has left:
+		<ul>
+			<li>Saturated: Infinity - 100%</li>
+			<li>Not Hungry: 100% - 83%</li>
+			<li>Peckish: 83% - 66%</li>
+			<li>Slightly Hungry: 66% - 50%</li>
+			<li>Hungry: 50% - 33%</li>
+			<li>Very Hungry: 33% - 16%</li>
+			<li>Starving: 16% - 0%</li>
+		</ul>
+		<h2>Food</h2>
+		Each food has a certain amount of calories associated with it's weight. Every time a player eats they only eat enough to fill them to 2000.
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>

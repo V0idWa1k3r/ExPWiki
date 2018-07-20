@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/scripts.js"></script>
+		<link rel="stylesheet" href="/main.css">
+    	<title>Health</title>
+  </head>
+  <body>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Health System</h1>
+		</div>
+		<div class="framed" style="position:absolute;width:132;height:173;right:0px">
+			 <img src="https://docs.google.com/uc?id=1hjAit83EpJPHhY24Z93oQwY3-UVmAcCd">
+		</div>
+		<h2>Health</h2>
+		<br>
+			 In ExPetrum health works differently to how it works in vanilla. <br>
+		<strong>
+			 Your maximum and base health is 5000 instead of 20. However all received damage is multiplied accordingly.
+		</strong>
+		<br>
+		The amount of health you have is represented by the heart icon in the bottom left of your screen.
+		<br>
+		The text varies and represents the rough percentage of health you currently have:
+		<br>
+		<ul>
+			<li> Healthy: 100% - 83% </li>
+			<li> Injured: 83% - 66% </li>
+			<li> Heavily Injured: 66% - 50% </li>
+			<li> Dying: 50% - 33% </li>
+			<li> Nearly Dead: 33% - 16% </li>
+			<li> Dead: 16% - 0% </li>
+		</ul>
+		<br>
+		<h2>Health Regen</h2>
+		<div w3-include-html="/templates/temp.html"></div>
+		<br>
+		The player slowly regenerates health at a rate of 10hp per 5 seconds 
+		<br>
+		<strong>or</strong>
+		<br>
+		if time was skipped(for example the player slept) then health regen is calculated for the time skipped by this formula: 
+		<br>
+		<strong>5 * (ticksSkipped / 100)</strong>.
+		<br>
+		Currently health regen is unaffected by thirst, hunger or illnesses.
+  </body>
+  <footer>
+  		  <div w3-include-html="/navbox.html"></div>
+  </footer>
+</html>
