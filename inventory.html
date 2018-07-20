@@ -4,8 +4,8 @@
     	<meta charset="utf-8">
     	<meta name="description" content="">
     	<meta name="keywords" content="">
-		<script src="/scripts.js"></script>
-		<link rel="stylesheet" href="/main.css">
+		<script src="/ExPWiki/scripts.js"></script>
+		<link rel="stylesheet" href="/ExPWiki/main.css">
     	<title>Inventory</title>
   </head>
   <body>
@@ -21,7 +21,7 @@
 		The first entry in item's description prefixed with the scales is the weight of the item in grams. The second entry prefixed by a box is the volume of the item. Weight is displayed for the whole stack(individualWeight * stackSize).
 		<br>
 		<h2>Weight</h2>
-		<div w3-include-html="/templates/temp.html"></div>
+		<div w3-include-html="/ExPWiki/templates/temp.html"></div>
 		Currently weight doesn't affect anything.
 		<br>
 		<h2>Volume</h2>
@@ -31,6 +31,6 @@
 		The weight and volume of items can be configured. Go to config/ExPetrum/CustomItemData. Any json file in there not named example.json will be parsed upon game startup and weights/volumes of items will be adjusted/set accordingly. Refer to example.json or vanilla.json for examples. 
   </body>
   <footer>
-  		  <div w3-include-html="/navbox.html"></div>
+  		  <div w3-include-html="/ExPWiki/navbox.html"></div>
   </footer>
 </html>
