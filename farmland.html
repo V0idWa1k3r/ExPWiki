@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/ExPWiki/scripts.js"></script>
+		<link rel="stylesheet" href="/ExPWiki/main.css">
+    	<title>Farmland</title>
+  </head>
+  <body>
+		<div class="framed" style="position:absolute;right:0px">
+    		<img id="blockData0" style="display:none;" src="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/textures/blocks/dirt/cambisol.png?raw=true">
+			<img id="blockData2" style="display:none;" src="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/textures/blocks/dirt/farmland/cambisol.png?raw=true">
+			<canvas id="blockData" style="width:128;height:128"></canvas>
+			<br>
+			ID: exp:farmland
+			<br>
+			Hardness: 3.5
+			<br>
+			Resistance: 3
+			<br>
+			Falls: Yes
+		</div>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Farmland</h1>
+		</div>
+		Farmland is a <strong>block</strong> added by ExPetrum.
+		<br>
+		All crops added by ExPetrum can only be grown on farmland.
+		<br>
+		To obtain farmland a block of dirt or grass must either be right-clicked one time with any <a href="/ExPWiki/hoe.html">Hoe</a> or right-clicked multiple times with a <a href="/ExPWiki/shovel.html">Shovel</a>.
+		<br>
+		Farmland can't be trampled and drops a dirt block upon being broken.
+		<br>
+		Farmland has an internal level of moisture that is displayed as the farmland top getting darker as the moisture increases.
+		<br>
+		Different crops require a different level of moisture for optimal growth.
+		<br>
+		Moisture can be increased in two ways:
+		<ul>
+			<li>Rain will set the moisture to 100% if it falls onto the farmland</li>
+			<li>Watering cans will slowly raise moisture when used.</li>
+		</ul>
+		Farmland will slowly loose moisture over time by a following value(per tick):
+		<ul>
+			<li>If block above is a <a href="/ExPWiki/shrubbery.html">generic plant</a> 0.00002 moisture is lost</li>
+			<li>Otherwise 0.00001 moisture is lost</li>
+		</ul>
+		Additionally farmland has a collection of nutrients in it:
+		<ul>
+			<li>Nitrogen</li>
+			<li>Potassium</li>
+			<li>Phosphorus</li>
+			<li>Calcium</li>
+			<li>Sulphur</li>
+			<li>Magnesium</li>
+			<li>Micronutrients</li>
+		</ul>
+		Any crop growing on the farmland will consume some of specific nutrients to grow.
+		<br>
+		Farmland slowly replenishes it's nutrients by a following formula(each tick):
+		<ul>
+			<li>If block above is a <a href="/ExPWiki/shrubbery.html">generic plant</a> 0.0000139 of all nutrients is lost.</li>
+			<li>Otherwise 0.00000139 nutrients is gained.</li>
+		</ul>
+		<br>
+		Since different crops consume different nutrients it is a good idea to cycle crops to different sets of farmland when they are grown to let the farmland replenish lost nutrients.
+		<br>
+		As farmland is made out of a dirt block it keeps the growth rate multiplier of that dirt block:
+		<ul>
+			<li>Acrisol: 0.2</li>
+			<li>Albeluvisol: 0.2</li>
+			<li>Calcisol: 1</li>
+			<li>Cambisol: 0.8</li>
+			<li>Chernozem: 1.5</li>
+			<li>Fluvisol: 1.1</li>
+			<li>Gleysol: 0.7</li>
+			<li>Gypsisol: 0.6</li>
+			<li>Peat: 0.7</li>
+			<li>Leptosol: 0.5</li>
+			<li>Planosol: 0.7</li>
+			<li>Podzol: 0.8</li>
+			<li>Regosol: 1</li>
+			<li>Solonchak: 0.1</li>
+			<li>Umbrisol: 0.2</li>
+			<li>Vertisol: 0.7</li>
+		</ul>
+		</body>
+  <footer>
+  		  <div w3-include-html="/ExPWiki/navbox.html"></div>
+  </footer>
+</html>

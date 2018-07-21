@@ -47,10 +47,34 @@ function includeHTML() {
         return;
       }
     }
-  }
+}
+
+function drawBlocks()
+{
+    var canvas = document.getElementById("blockData");
+    if (canvas != null)
+    {
+        canvas.width = 160;
+        canvas.height = 160;
+        var img0 = document.getElementById("blockData0");
+        var img1 = document.getElementById("blockData1");
+        var img2 = document.getElementById("blockData2");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.transform(1,0.5,0,1,0,0);
+        ctx.drawImage(img0, 32, 32, 64, 64);
+        ctx.beginPath();
+        ctx.setTransform(0.5,-0.5,0,1,0,0);
+        ctx.drawImage(img1 == null ? img0 : img1, 188, 175, 96, 64);
+        ctx.beginPath();
+        ctx.setTransform(1.3,0.7,-0.7,0.7,0,0);
+        ctx.drawImage(img2 == null ? img0 : img2, 40.5, -39, 47.5, 68);
+    }
+}
 
 window.onload = function(e)
 {
     includeHTML();
     giveSpoilersEffects();
+    drawBlocks();
 }

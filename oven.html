@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="">
+    	<meta name="keywords" content="">
+		<script src="/ExPWiki/scripts.js"></script>
+		<link rel="stylesheet" href="/ExPWiki/main.css">
+    	<title>Oven</title>
+  </head>
+  <body>
+		<div class="framed" style="position:absolute;right:0px">
+    		<img id="blockData1" style="display:none;" src="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/textures/blocks/brick.png?raw=true">
+			<img id="blockData0" style="display:none;" src="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/textures/blocks/oven.png?raw=true">
+			<img id="blockData2" style="display:none;" src="https://github.com/V0idWa1k3r/ExPetrum/blob/master/src/main/resources/assets/exp/textures/blocks/brick.png?raw=true">
+			<canvas id="blockData" style="width:128;height:128"></canvas>
+			<br>
+			ID: exp:oven
+			<br>
+			Hardness: 1
+			<br>
+			Resistance: 3
+			<br>
+			Falls: False
+		</div>
+  		<div class="framed" style="margin:auto;width:300px;text-align:center;">
+			 <h1>Oven</h1>
+		</div>
+		Oven is a <strong>block</strong> added by ExPetrum.
+		<br>
+		Oven can be obtained by crafting from 8 <a href="/ExPWiki/brick.html">Bricks</a> and a Bronze Double Sheet:
+		<br>
+		<img src="https://docs.google.com/uc?id=1X0zOg_MLaeyX06MfIaacn02oNrXBbFaS">
+		<br>
+		Oven has an interface that can be opened by right-clicking:
+		<br>
+		<img src="https://docs.google.com/uc?id=1EqQIrgUmuKwxj_Th-4c9QFt9h1emzLEL">
+		<br>
+		The bar on the left is the temperature bar.
+		<br>
+		The fluid bar to the right of the temperature bar represents the current amount of Olive/Walnut Oil in the oven.
+		<br>
+		The slot on the top-left is for the Oli containers(example: Olive Oil Bottle).
+		<br>
+		The slot on the bottom-left is for the result item from consuming the fluid container item(example: Glass Bottle).
+		<br>
+		The four slots on the top are for the items that the player wishes to cook.
+		<br>
+		The slot directly underneath the four slots is for fuel.
+		<br>
+		The maximum temperature the oven can reach is 500 degrees.
+		<br>
+		The oven is unaffected by <a href="/ExPWiki/bellows_manual.html">bellows</a>.
+		<br>
+		The oven needs to be lit up in order to consume fuel and heat up. To lit the oven up it must be right-clicked with a <a href="/ExPWiki/fire_starter.html">Fire Starter</a> or a <a href="/ExPWiki/flint_and_iron.html">Flint And Iron</a>.
+		<br>
+		The maximum amount of Oil the oven can hold in itself is 1000mb.
+		<br>
+		The oven is intended for cooking. While it can heat up any item it will heat up food related items twice as fast(20 degrees/second).
+		<br>
+		Additionally the oven has the ability to apply the Well Cooked status to cooked food making it rot at 35% the rate.
+		<br>
+		To apply that effect the oven must have at least 50mb of Olive or Walnut oil in it while cooking the item.
+		<br>
+		Upon cooking the oven will consume 50mb of oil and apply the Well Cooked status to the food.
+		<br>
+		This mechanic only applies to food items.	
+	</body>
+  <footer>
+  		  <div w3-include-html="/ExPWiki/navbox.html"></div>
+  </footer>
+</html>
