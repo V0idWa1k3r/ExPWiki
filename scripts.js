@@ -1,3 +1,10 @@
+function showImage(self, image)
+{
+    var img = document.createElement("img");
+    img.src = image;
+    self.parentNode.replaceChild(img, self);
+}
+
 function toggleSpoiler(self)
 {
     var spoiler = self.parentElement;
